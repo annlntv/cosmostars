@@ -1783,8 +1783,10 @@ MonoBehaviour:
   pointsText: {fileID: 4530269468689159999}
   defeatUI: {fileID: 4530269467936736799}
   score: {fileID: 8539029187120764613}
+  winScore: {fileID: 1534983658235093948}
   gameController: {fileID: 0}
   winUI: {fileID: 5297704788618779450}
+  HUD: {fileID: 4530269469254577158}
 --- !u!1 &5034334595866418700
 GameObject:
   m_ObjectHideFlags: 0

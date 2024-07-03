@@ -16,6 +16,7 @@ public class UI : MonoBehaviour
     public GameController gameController;
 
     public GameObject winUI;
+    public GameObject HUD;
     void Update()
     {
         pointsText.text = player.points.ToString();
@@ -29,6 +30,7 @@ public class UI : MonoBehaviour
         if(gameController._levelcomplete)
         {
             winUI.SetActive(true);
+            HUD.SetActive(false);
             winScore.text = "Score: " + player.points.ToString();
         }
     }

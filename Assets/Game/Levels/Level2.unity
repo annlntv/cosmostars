@@ -1097,6 +1097,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1114999998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4530269469254577158, guid: 2bb4eefc329214a68a6da91eb63fdb70, type: 3}
+  m_PrefabInstance: {fileID: 1114999996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1298970608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 93893034812043852, guid: b96486327692105459cdd6781ad45aa4, type: 3}
@@ -1210,6 +1215,7 @@ MonoBehaviour:
   winScore: {fileID: 1724279124}
   gameController: {fileID: 1878961263}
   winUI: {fileID: 1789315321}
+  HUD: {fileID: 1114999998}
 --- !u!1 &1451341106
 GameObject:
   m_ObjectHideFlags: 0
