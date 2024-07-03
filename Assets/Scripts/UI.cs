@@ -12,6 +12,9 @@ public class UI : MonoBehaviour
     public TextMeshProUGUI pointsText;
     public GameObject defeatUI;
     public TMP_Text score;
+    public GameController gameController;
+
+    public GameObject winUI;
     void Update()
     {
         pointsText.text = player.points.ToString();
@@ -19,7 +22,13 @@ public class UI : MonoBehaviour
         if (player == null)
         {
             defeatUI.SetActive(true);
-            score.text = "Best Score: " + PlayerPrefs.GetInt("score").ToString();
+            score.text = "Score: " + PlayerPrefs.GetInt("score").ToString();
+        }
+
+        if(gameController._levelcomplete)
+        {
+            winUI.SetActive(true);
+            score.text = "Score: " + PlayerPrefs.GetInt("score").ToString();
         }
     }
 
@@ -33,5 +42,11 @@ public class UI : MonoBehaviour
     public void OnClickToMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void OnClickNextLevel()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index + 1);
     }
 }

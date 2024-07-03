@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class GameController : MonoBehaviour
+public class ZenController : MonoBehaviour
 {
     public static float gameSpeed;
     public PlayerMovement player;
@@ -12,11 +12,6 @@ public class GameController : MonoBehaviour
     public float gameSpeedMax = 5;
     int _scenenum;
 
-    public bool _levelcomplete = false;
-    private void Start()
-    {
-        _scenenum = SceneManager.GetActiveScene().buildIndex;
-    }
 
     void Update()
     {
@@ -30,10 +25,5 @@ public class GameController : MonoBehaviour
         
         gameSpeed = gameSpeedRegulator;
 
-        if(((player.points * _scenenum) % 25 == 0) & (player.points != 0))
-        {
-            print("lvl complete");
-            _levelcomplete = true;
-        }
     }
 }
