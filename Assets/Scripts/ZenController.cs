@@ -12,6 +12,7 @@ public class ZenController : MonoBehaviour
     public float gameSpeedMax = 5;
     int _scenenum;
 
+    
 
     void Update()
     {

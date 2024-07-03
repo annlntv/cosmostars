@@ -6,16 +6,14 @@ using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class UI : MonoBehaviour
+public class ZenUI : MonoBehaviour
 {
     public PlayerMovement player;
     public TextMeshProUGUI pointsText;
     public GameObject defeatUI;
     public TMP_Text score;
-    public TMP_Text winScore;
-    public GameController gameController;
+    public ZenController gameController;
 
-    public GameObject winUI;
     void Update()
     {
         pointsText.text = player.points.ToString();
@@ -23,14 +21,9 @@ public class UI : MonoBehaviour
         if (player == null)
         {
             defeatUI.SetActive(true);
-            score.text = "Best Score: " + PlayerPrefs.GetInt("score").ToString();
+            score.text = "Score: " + PlayerPrefs.GetInt("score").ToString();
         }
 
-        if(gameController._levelcomplete)
-        {
-            winUI.SetActive(true);
-            winScore.text = "Score: " + player.points.ToString();
-        }
     }
 
     public void OnClickRestart()
