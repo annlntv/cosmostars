@@ -7,14 +7,18 @@ using TMPro;
 public class MainMenu : MonoBehaviour
 {
     public TMP_Text score;
-    [SerializeField] string sceneName;
+    [SerializeField] int sceneName;
+
+    SceneTransition transition;
     public void Start()
     {
         score.text = "Best Score: " + PlayerPrefs.GetInt("score").ToString();
+        transition = FindObjectOfType<SceneTransition>();
     }
     public void OnClickStart()
     {
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
+        transition.SceneLoader(sceneName);
     }
 
     public void OnClickExit()

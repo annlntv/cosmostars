@@ -4,13 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelsMenu : MonoBehaviour
 {
-    [SerializeField] string sceneName;
-
+    [SerializeField] int sceneName;
+    SceneTransition transition;
+    private void Start()
+    {
+        
+    }
     public void OnClickStart()
     {
-        if (sceneName != null)
+        transition = FindObjectOfType<SceneTransition>();
+        if (transition != null)
         {
-            SceneManager.LoadScene(sceneName);
+            transition.SceneLoader(sceneName);
         }
     }
 }

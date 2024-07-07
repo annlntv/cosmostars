@@ -531,6 +531,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 271117259}
+    - target: {fileID: 4415583555354365094, guid: 2bb4eefc329214a68a6da91eb63fdb70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2145001271}
+    - target: {fileID: 4415583555354365094, guid: 2bb4eefc329214a68a6da91eb63fdb70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415583555354365094, guid: 2bb4eefc329214a68a6da91eb63fdb70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ZenUI, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4530269467477186889, guid: 2bb4eefc329214a68a6da91eb63fdb70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

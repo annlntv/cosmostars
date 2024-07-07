@@ -17,6 +17,13 @@ public class UI : MonoBehaviour
 
     public GameObject winUI;
     public GameObject HUD;
+
+    SceneTransition transition;
+
+    private void Start()
+    {
+        transition = FindObjectOfType<SceneTransition>();
+    }
     void Update()
     {
         pointsText.text = player.points.ToString();
@@ -39,17 +46,20 @@ public class UI : MonoBehaviour
     {
 
         int index = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(index);
+        //SceneManager.LoadScene(index);
+        transition.SceneLoader(index);
     }
 
     public void OnClickToMenu()
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        transition.SceneLoader(1);
     }
 
     public void OnClickNextLevel()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(index + 1);
+        transition.SceneLoader(index+1);
+        //SceneManager.LoadScene(index + 1);
     }
 }

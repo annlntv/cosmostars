@@ -13,7 +13,7 @@ public class ZenUI : MonoBehaviour
     public GameObject defeatUI;
     public TMP_Text score;
     public ZenController gameController;
-
+    SceneTransition transition;
     void Update()
     {
         pointsText.text = player.points.ToString();
@@ -30,12 +30,21 @@ public class ZenUI : MonoBehaviour
     {
 
         int index = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(index);
+        //SceneManager.LoadScene(index);
+        transition = FindObjectOfType<SceneTransition>();
+        if (transition != null)
+        {
+            transition.SceneLoader(index);
+        }
     }
 
     public void OnClickToMenu()
     {
-        SceneManager.LoadScene(0);
+        transition = FindObjectOfType<SceneTransition>();
+        if (transition != null)
+        {
+            transition.SceneLoader(1);
+        }
     }
 
     public void OnClickNextLevel()
