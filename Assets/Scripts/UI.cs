@@ -26,7 +26,6 @@ public class UI : MonoBehaviour
     }
     void Update()
     {
-        pointsText.text = player.points.ToString();
 
         if (player == null)
         {

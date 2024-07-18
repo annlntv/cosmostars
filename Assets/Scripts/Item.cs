@@ -8,10 +8,9 @@ public class Item : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            PlayerMovement player = collision.GetComponent<PlayerMovement>();
-            player.points++;
+            FindObjectOfType<ItemManager>().AddOne();
             Destroy(this.gameObject);
-            PlayerPrefs.SetInt("score", player.points);
+            PlayerPrefs.SetInt("score", FindObjectOfType<ItemManager>().numberOfItems);
         }
     }
 }

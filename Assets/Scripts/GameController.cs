@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (player.points % 5 == 0)
+        if (FindObjectOfType<ItemManager>().numberOfItems % 5 == 0)
         {
             if (gameSpeedRegulator <= gameSpeedMax)
             {
@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
         
         gameSpeed = gameSpeedRegulator;
 
-        if((player.points  % (12*_scenenum) == 0) & (player.points != 0))
+        if((FindObjectOfType<ItemManager>().numberOfItems % (12*_scenenum) == 0) & (FindObjectOfType<ItemManager>().numberOfItems != 0))
         {
             _levelcomplete = true;
             player.GetComponent<CircleCollider2D>().enabled = false;
