@@ -34,26 +34,41 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (Input.GetMouseButton(0))
+        {
+            float screenWidth = Screen.width;
+            float halfScreenWidth = screenWidth / 2;
+            Vector2 mousePosition = Input.mousePosition;
 
-        // Движение влево или вправо
-        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
-        // Ограничение движения персонажа по горизонтали
+            if (mousePosition.x < halfScreenWidth)
+            {
+
+                rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            else
+            {
+                rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+        }
+        else
+        {
+            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+            if (horizontalInput < 0)
+            {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            else if (horizontalInput > 0)
+            {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+        }
+
         Vector2 position = transform.position;
         position.x = Mathf.Clamp(position.x, -screenLimitX, screenLimitX);
         transform.position = position;
-
-        // Проверка, нажата ли клавиша "A" или "D"
-        if (horizontalInput < 0)
-        {
-            // Движение влево
-            transform.localScale = new Vector3(-1f, 1f, 1f); // Поворот спрайта персонажа влево
-        }
-        else if (horizontalInput > 0)
-        {
-            // Движение вправо
-            transform.localScale = new Vector3(1f, 1f, 1f); // Поворот спрайта персонажа вправо
-        }
-    } 
+    }
 }
