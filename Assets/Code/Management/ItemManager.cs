@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CoinManager : MonoBehaviour
+public class ItemManager : MonoBehaviour
 {
     public int numberOfItems;
     [SerializeField] TextMeshProUGUI text;

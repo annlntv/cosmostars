@@ -21,7 +21,7 @@ public class ZenUI : MonoBehaviour
         if (player == null)
         {
             defeatUI.SetActive(true);
-            score.text = "Score: " + PlayerPrefs.GetInt("score").ToString();
+            score.text = "Score: " + player.points.ToString();
         }
 
     }
