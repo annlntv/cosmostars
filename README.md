@@ -1,6 +1,6 @@
 # ![C8_IsD](https://github.com/user-attachments/assets/d87b26b7-b389-4e25-8dea-f2e9796dde5c)
-**
-IN DEVELOPMENT **
+
+**IN DEVELOPMENT**
 **2D Shoot em' Up**
 
 Добро пожаловать в безумный космос, где звезды сияют ярче, чем когда-либо, а астероиды летят чаще, чем автобусы в пиковые часы! Добро пожаловать в Cosmostars - самую атмосферную космическую аркаду!
