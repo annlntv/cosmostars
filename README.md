@@ -15,3 +15,4 @@
 
 Готов ли ты сделать космос своим личным феерическим шоу?
 
+<img width="167" alt="z2O2Se" src="https://github.com/user-attachments/assets/c6a16f43-c590-4f30-9174-ffc935307750">
